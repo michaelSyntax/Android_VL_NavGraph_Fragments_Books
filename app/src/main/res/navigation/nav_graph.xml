@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bookListFragment">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.android_vl_nav_fragmente.ui.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_bookEditFragment"
+            app:destination="@id/bookEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookEditFragment"
+        android:name="com.example.android_vl_nav_fragmente.ui.BookEditFragment"
+        android:label="fragment_book_edit"
+        tools:layout="@layout/fragment_book_edit" >
+        <argument
+            android:name="book_title"
+            app:argType="string" />
+        <argument
+            android:name="karteoffelBrei"
+            app:argType="string"
+            android:defaultValue='"Hex Hex"' />
+    </fragment>
+</navigation>
